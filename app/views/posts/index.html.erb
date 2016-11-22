@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="blog-header">
+    <h1 class="blog-title">Single Page Anonymous Blog</h1>
+    <p class="lead blog-description">This is an awesome single page blog</p>
+  </div>
+  <div class="row">
+    <div id="posts" class="col-sm-8 blog-main">
+    </div>
+    <div id="post_form" class="col-sm-3 col-sm-offset-1 blog-sidebar">
+      <div class="sidebar-module sidebar-module-inset">
+        <h4>Create Post</h4>
+        <div class="errors"></div>
+        <%= bootstrap_form_for @post do |f| %>
+          <%= f.text_field :title %><br />
+          <%= f.text_area :body %><br />
+
+          <%= f.submit %>
+        <% end %>
+      </div>
+    </div>
+  </div>
